@@ -1,17 +1,22 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <SearchBar @onTermChange="onTermChange"></SearchBar>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SearchBar from './components/SearchBar';
+const API_KEY = 'AIzaSyBydOE29bGLTSYZtjxVcgFnuUWcdwu-6M8';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components:{
+    SearchBar
+  },
+  methods:{
+    onTermChange(term){
+      console.log(term)
+    }
   }
 }
 </script>
